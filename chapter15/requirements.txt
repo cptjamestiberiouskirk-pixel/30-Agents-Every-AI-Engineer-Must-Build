@@ -10,7 +10,7 @@
 # === Core Dependencies (Ch.15, p. 2) ===
 numpy==1.26.4
 networkx==3.3
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 
 # === Jupyter Runtime ===
 jupyter>=1.0.0

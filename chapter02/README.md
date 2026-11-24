@@ -12,6 +12,8 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ## Quickstart
 
+To read the worked examples on GitHub, open the [Chapter 2 simulation notebook](ch02_agent_toolkit__RUN_NO_KEY_SIMULATION.ipynb). Its saved output is available without installing Python or using an API key.
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
@@ -22,23 +24,16 @@ cd chapter02
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
 # .venv\Scripts\activate    # Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# Then add your provider's dependencies:
-pip install -r requirements-openai.txt    # For OpenAI GPT-4o
-pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
-pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
-pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
-
-# 4. (Optional) Configure your LLM provider for Live Mode
-cp .env.template .env
-# Set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY — or use Ollama locally
-
-# 5. Launch the notebook
-jupyter notebook chapter_02_agent_toolkit.ipynb
 ```
+
+To run the examples locally, keep the full repository checkout and run these commands from `chapter02` with your virtual environment active. Jupyter opens the notebook, and SymPy performs the calculation in the calculator example.
+
+```bash
+python -m pip install notebook sympy
+jupyter notebook ch02_agent_toolkit.ipynb
+```
+
+For a simulation run, use an environment without provider credentials. If the notebook prompts for an API key, press Enter to leave it blank.
 
 ## Section Map
 
@@ -106,7 +101,7 @@ For a detailed comparison of how each provider performs on this chapter's tasks 
 ## Requirements
 
 - **Python:** 3.10+ (recommended: 3.11 or 3.12)
-- **Dependencies:** See `requirements.txt` (base) and `requirements-<provider>.txt` for your LLM provider
+- **Local simulation:** Install Jupyter Notebook and SymPy. Start Jupyter from `chapter02` so the notebook can import the included `mock_llm_layer.py` module.
 - **API Key:** Optional — any of OpenAI, Anthropic, Google, or local Ollama. Simulation Mode works without any.
 
 ## License

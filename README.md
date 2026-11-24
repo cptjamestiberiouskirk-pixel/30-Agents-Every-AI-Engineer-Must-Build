@@ -38,16 +38,19 @@ cd 30-Agents-Every-AI-Engineer-Must-Build
 
 # Navigate to a chapter
 cd chapter05
+```
 
-# Install base dependencies
-pip install -r requirements.txt
+To read an example, open the chapter’s saved simulation notebook on GitHub. Reading its output makes no provider calls.
 
-# Install your chosen provider's dependencies
-pip install -r requirements-openai.txt    # For OpenAI GPT-4o
-pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
-pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
-pip install -r requirements-ollama.txt    # For local Ollama (no API key)
+To run examples locally, create a separate Python virtual environment for each chapter. For this Chapter 5 example, activate the environment and install the base dependencies from `chapter05`:
 
+```bash
+python -m pip install -r requirements.txt
+```
+
+If you want to run a live example, follow the provider instructions in that chapter’s README. Before running cells, check which credentials are available in your environment or `.env` file. A live run can send notebook inputs to the provider and incur account usage or charges.
+
+```bash
 # (Optional) Configure your API key for Live Mode
 cp .env.template .env
 # Set ONE of: OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY

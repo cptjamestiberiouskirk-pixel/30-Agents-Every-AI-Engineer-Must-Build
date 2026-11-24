@@ -22,16 +22,24 @@ cd chapter05
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
 # .venv\Scripts\activate    # Windows
+```
 
-# 3. Install dependencies
-pip install -r requirements.txt
+Open the saved simulation notebook to read the examples on GitHub. To run them locally, activate a virtual environment for this chapter and install its base dependencies:
 
-# Then add your provider's dependencies:
-pip install -r requirements-openai.txt    # For OpenAI GPT-4o
-pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
-pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
-pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
+```bash
+python -m pip install -r requirements.txt
+```
 
+For a provider-specific example, install only the requirements for the provider you plan to use. Choose one command:
+
+- **OpenAI:** `python -m pip install -r requirements-openai.txt`
+- **Anthropic:** `python -m pip install -r requirements-claude.txt`
+- **Google Gemini:** `python -m pip install -r requirements-gemini.txt`
+- **Local Ollama:** `python -m pip install -r requirements-ollama.txt`
+
+These commands install Python packages. Live examples also need the credentials or local models described in the chapter.
+
+```bash
 # 4. (Optional) Configure your LLM provider for Live Mode
 cp .env.template .env
 # Set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY — or use Ollama locally
